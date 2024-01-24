@@ -14,3 +14,14 @@ jobs:
             username: parisk
             password: ${{ secrets.GHCR_PAT }}
       - run: docker compose alpha publish ghcr.io/parisk/docker-remote-include-test
+
+  config:
+    needs: publish
+    runs-on: ubuntu-latest
+    env:
+      COMPOSE_EXPERIMENTAL_OCI_REMOTE: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose version
+      - run: docker compose config --no-normalize
+    
