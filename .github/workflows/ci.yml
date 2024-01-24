@@ -11,6 +11,6 @@ jobs:
       - uses: docker/login-action@v3
         with:
             registry: ghcr.io
-            username: ${{ github.actor }}
-            password: ${{ secrets.GITHUB_TOKEN }}
+            username: parisk
+            password: ${{ secrets.GHCR_PAT }}
       - run: docker compose alpha publish ghcr.io/parisk/docker-remote-include-test
