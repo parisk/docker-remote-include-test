@@ -1,2 +1,2 @@
 include:
-  - docker:ghcr.io/parisk/docker-remote-include-test
+  - docker:ghcr.io/parisk/docker-remote-include-test:latest
