@@ -22,6 +22,7 @@ jobs:
       COMPOSE_EXPERIMENTAL_OCI_REMOTE: true
     steps:
       - uses: actions/checkout@v4
+      - run: docker info
       - run: docker compose version
       - run: docker compose config --no-normalize
     
