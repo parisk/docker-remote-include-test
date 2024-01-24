@@ -13,4 +13,4 @@ jobs:
             registry: ghcr.io
             username: ${{ github.actor }}
             password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker compose alpha publish ghcr.io/docker-remote-include-test
+      - run: docker compose alpha publish ghcr.io/parisk/docker-remote-include-test
