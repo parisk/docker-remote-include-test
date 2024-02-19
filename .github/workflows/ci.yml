@@ -19,7 +19,7 @@ jobs:
     needs: publish
     runs-on: ubuntu-latest
     env:
-      COMPOSE_EXPERIMENTAL_OCI_REMOTE: true
+      COMPOSE_EXPERIMENTAL_OCI_REMOTE: "1"
     steps:
       - uses: actions/checkout@v4
       - run: docker info
