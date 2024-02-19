@@ -25,4 +25,5 @@ jobs:
       - run: docker info
       - run: docker compose version
       - run: docker compose config --no-normalize
+      - run: docker compose alpha viz --image --indentation-size=4 --networks --ports --spaces
     
