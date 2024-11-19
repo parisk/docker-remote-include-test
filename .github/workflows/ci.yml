@@ -19,7 +19,7 @@ jobs:
         with:
             registry: ghcr.io
             username: parisk
-            password: ${{ secrets.GHCR_PAT }}
+            password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker compose alpha publish ghcr.io/parisk/docker-remote-include-test
 
   config:
