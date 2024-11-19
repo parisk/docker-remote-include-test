@@ -11,6 +11,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
+      COMPOSE_EXPERIMENTAL_OCI_REMOTE: "1"
       COMPOSE_FILE: docker-compose.publish.yml
     steps:
       - uses: actions/checkout@v4
