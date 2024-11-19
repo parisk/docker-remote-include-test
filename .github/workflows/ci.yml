@@ -1,5 +1,12 @@
 on: push
 
+permissions:
+  id-token: write
+  contents: write
+  issues: write
+  pull-requests: write
+  packages: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -26,4 +33,3 @@ jobs:
       - run: docker compose version
       - run: docker compose config --no-normalize
       - run: docker compose alpha viz --image --indentation-size=4 --networks --ports --spaces
-    
